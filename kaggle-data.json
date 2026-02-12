@@ -1,0 +1,55 @@
+{
+    "username": "vedantbhavsar43",
+    "profileUrl": "https://www.kaggle.com/vedantbhavsar43",
+    "rank": "Contributor",
+    "globalRank": "-",
+    "stats": {
+        "competitions": 1,
+        "datasets": 2,
+        "notebooks": 5,
+        "discussions": 22
+    },
+    "medals": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1
+    },
+    "competitions_list": [],
+    "notebooks_list": [
+        {
+            "title": "Boston Dataset Multicollinearity",
+            "description": "Analysis of multicollinearity in the Boston Housing dataset with visualization and feature selection.",
+            "votes": 9,
+            "medal": "bronze",
+            "tools": [
+                "Python",
+                "Pandas",
+                "Seaborn"
+            ],
+            "url": "https://www.kaggle.com/code/vedantbhavsar43/boston-dataset-multicollinearity"
+        },
+        {
+            "title": "Student Score Prediction",
+            "description": "Predicting student scores based on study hours using simple linear regression.",
+            "votes": 5,
+            "medal": null,
+            "tools": [
+                "Python",
+                "Scikit-Learn",
+                "Matplotlib"
+            ],
+            "url": "https://www.kaggle.com/code/vedantbhavsar43/student-score-prediction"
+        },
+        {
+            "title": "Mobile Price Prediction Dataset",
+            "description": "Dataset and analysis for predicting mobile phone price ranges based on specifications.",
+            "votes": 4,
+            "medal": null,
+            "tools": [
+                "Data Collection",
+                "EDA"
+            ],
+            "url": "https://www.kaggle.com/datasets/vedantbhavsar43/mobile-price-prediction-dataset"
+        }
+    ]
+}
