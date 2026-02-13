@@ -778,12 +778,26 @@ a {
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {
+
+    /* Global Mobile Fixes */
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+        /* Reduce padding from 2rem to 1rem */
+    }
+
     h1 {
         font-size: 2.5rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        /* Smaller H2 */
     }
 
     .nav-links {
@@ -792,6 +806,22 @@ a {
 
     .mobile-nav-toggle {
         display: block;
+    }
+
+    /* Wrap Buttons */
+    .cta-buttons {
+        flex-wrap: wrap;
+        gap: 1rem;
+        flex-direction: column;
+        /* Stack buttons on very small screens if needed, or keep row with wrap */
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        /* Full width buttons on mobile look better */
+        justify-content: center;
     }
 
     .timeline::after {
