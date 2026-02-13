@@ -821,20 +821,120 @@ a {
         height: 200px;
     }
 
-    /* Hamburger Menu visible state (if implemented in JS or CSS checkbox hack) */
-    .navbar.mobile-active .nav-links {
-        display: flex;
+    /* Mobile Navigation */
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+        /* Ensure it's above the menu */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--text-primary);
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 0;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
+        background-color: rgba(3, 7, 18, 0.95);
+        /* High opacity background */
+        backdrop-filter: blur(15px);
         width: 100%;
-        background: var(--bg-color);
-        padding: 2rem;
-        border-bottom: 1px solid var(--glass-border);
+        height: 100vh;
+        /* Full viewport height */
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        justify-content: center;
+        /* Center items vertically */
+        padding-top: 0;
+        /* Remove padding */
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 2.5rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        /* Larger font for mobile */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .glass-card {
         padding: var(--spacing-sm);
+    }
+
+    /* Adjust Hero Font Sizes */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* Project Card on Mobile */
+    .project-card {
+        min-height: auto;
+    }
+
+    /* About Stats mobile adjustment */
+    .about-stats {
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+    }
+
+    .stat {
+        min-width: 80px;
+    }
+
+    /* Hide custom cursor on mobile */
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
     }
 }
