@@ -112,3 +112,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Contact Form Obfuscation
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.setAttribute('action', 'https://formspree.io/f/xreaqzvr');
+    }
+});
