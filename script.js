@@ -117,6 +117,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.setAttribute('action', 'https://formspree.io/f/xreaqzvr');
+        // This placeholder will be replaced by GitHub Actions during deployment
+        contactForm.setAttribute('action', '__FORMSPREE_URL__');
     }
 });
