@@ -361,8 +361,11 @@ a {
 .scroll-down {
     position: absolute;
     bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* transform: translateX(-50%);  <-- Removed to avoid conflict with animation */
     animation: bounce 2s infinite;
 }
 
@@ -784,20 +787,19 @@ a {
     body {
         overflow-x: hidden;
         width: 100%;
+        position: relative;
     }
 
     .container {
-        padding: 0 var(--spacing-sm);
-        /* Reduce padding from 2rem to 1rem */
+        padding: 0 1.5rem;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     h2 {
         font-size: 1.8rem;
-        /* Smaller H2 */
     }
 
     .nav-links {
@@ -808,22 +810,78 @@ a {
         display: block;
     }
 
+    /* Hero Section Mobile */
+    .hero {
+        height: auto;
+        min-height: 100svh;
+        padding-top: 80px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* Ensure z-index works if needed */
+        margin-bottom: 2rem;
+    }
+
+    /* Mouse Scroll Indicator Mobile - REMOVED as per user request */
+    .scroll-down {
+        display: none;
+    }
+
+    /* Keep bounce animation but reset transform origin since we removed translateX */
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-10px);
+        }
+
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
     /* Wrap Buttons */
     .cta-buttons {
-        flex-wrap: wrap;
-        gap: 1rem;
         flex-direction: column;
-        /* Stack buttons on very small screens if needed, or keep row with wrap */
-        align-items: center;
+        gap: 1rem;
         width: 100%;
+        margin-top: 2rem;
     }
 
     .btn {
         width: 100%;
-        /* Full width buttons on mobile look better */
         justify-content: center;
     }
 
+    /* Timeline Adjustments */
     .timeline::after {
         left: 31px;
     }
@@ -842,6 +900,12 @@ a {
         text-align: left;
     }
 
+    .right {
+        left: 0;
+        text-align: left;
+        /* Ensure right items are also left-aligned text-wise if needed */
+    }
+
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
@@ -849,6 +913,7 @@ a {
     .blob {
         width: 200px;
         height: 200px;
+        opacity: 0.4;
     }
 
     /* Mobile Navigation */
@@ -856,7 +921,6 @@ a {
         display: block;
         cursor: pointer;
         z-index: 1001;
-        /* Ensure it's above the menu */
     }
 
     .hamburger {
@@ -869,7 +933,6 @@ a {
         width: 25px;
         height: 3px;
         margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
         background-color: var(--text-primary);
     }
@@ -880,19 +943,15 @@ a {
         top: 0;
         gap: 0;
         flex-direction: column;
-        background-color: rgba(3, 7, 18, 0.95);
-        /* High opacity background */
+        background-color: rgba(3, 7, 18, 0.98);
         backdrop-filter: blur(15px);
         width: 100%;
         height: 100vh;
-        /* Full viewport height */
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         justify-content: center;
-        /* Center items vertically */
         padding-top: 0;
-        /* Remove padding */
     }
 
     .nav-links.active {
@@ -900,12 +959,11 @@ a {
     }
 
     .nav-links li {
-        margin: 2.5rem 0;
+        margin: 2rem 0;
     }
 
     .nav-links a {
         font-size: 1.5rem;
-        /* Larger font for mobile */
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -921,24 +979,12 @@ a {
     }
 
     .glass-card {
-        padding: var(--spacing-sm);
+        padding: 1.5rem;
+        margin-bottom: 1rem;
     }
 
-    /* Adjust Hero Font Sizes */
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
+    .section {
+        padding: 4rem 0;
     }
 
     /* Project Card on Mobile */
@@ -946,20 +992,25 @@ a {
         min-height: auto;
     }
 
-    /* About Stats mobile adjustment */
     .about-stats {
-        gap: var(--spacing-sm);
+        gap: 1.5rem;
         flex-wrap: wrap;
     }
 
     .stat {
-        min-width: 80px;
+        min-width: 100px;
+        margin-bottom: 1rem;
     }
 
-    /* Hide custom cursor on mobile */
+    /* Ensure scroll down indicator doesn't overlap */
+    .scroll-down {
+        bottom: 20px;
+    }
+
+    /* Hide custom cursor layout on mobile, keep system cursor */
     .cursor-dot,
     .cursor-outline {
-        display: none;
+        display: none !important;
     }
 }
 
