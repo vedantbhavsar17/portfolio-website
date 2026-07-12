@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects &amp; Case Studies — Vedant Harish Bhavsar</title>
+  <meta name="description"
+    content="Machine learning projects and case studies by Vedant Harish Bhavsar — regression, classification, PCA, with live GitHub repositories and Kaggle work." />
+  <link rel="canonical" href="https://vedantbhavsar17.github.io/projects.html" />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="Projects & Case Studies — Vedant Harish Bhavsar" />
+  <meta property="og:description" content="ML projects and case studies with live GitHub and Kaggle work." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a href="index.html" class="brand"><span class="pulse"></span>vedant.bhavsar</a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="lab.html">AI Lab</a></li>
+          <li><a href="logs.html">Logs</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="kbd-btn" data-cmdk-open aria-label="Open command palette">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
+          <span class="kbd-label">Search</span><kbd>⌘K</kbd>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"></button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:calc(var(--header-h) + 4rem)">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">Projects</p>
+          <h1 class="sec-title">Things I've built, and how.</h1>
+          <p class="sec-sub">Each project links to source. Expand a card for the full case study — problem, approach, and result.</p>
+        </div>
+
+        <div class="filters" id="projectFilters" data-reveal></div>
+        <div class="projects-grid" id="allProjects" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- KAGGLE -->
+    <section class="section section--tight" id="kaggle">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">Kaggle</p>
+          <h2 class="sec-title">Datasets &amp; notebooks.</h2>
+          <p class="sec-sub">Where I practice on real data. Follow along or fork my notebooks.</p>
+        </div>
+        <div class="card card--tick" data-reveal>
+          <div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-start;justify-content:space-between">
+            <div>
+              <div class="lab-kind">kaggle.com</div>
+              <div style="font-family:var(--font-mono);font-size:1.2rem;font-weight:600;margin-top:0.3rem" id="kaggleHandle"></div>
+              <div id="kaggleHeadline" style="margin-top:0.5rem"></div>
+            </div>
+            <a href="https://www.kaggle.com/vedantbhavsar43" id="kaggleLink" target="_blank" rel="noopener" class="btn">Open Kaggle profile ↗</a>
+          </div>
+          <div id="kaggleTiers" class="gh-grid" style="margin-top:1.6rem"></div>
+          <div id="kaggleNotebooks" style="margin-top:1rem"></div>
+        </div>
+
+        <!-- Kaggle public activity -->
+        <div class="heatmap-wrap" data-reveal data-reveal-delay="1" style="margin-top:1.2rem">
+          <div class="heatmap-head">
+            <span class="status" data-s="live" id="kaggleActLabel"><span class="dot"></span> Public activity</span>
+            <div class="heatmap-legend">Less
+              <span class="cell" data-l="0"></span><span class="cell" data-l="1"></span>
+              <span class="cell" data-l="2"></span><span class="cell" data-l="3"></span>
+              <span class="cell" data-l="4"></span> More
+            </div>
+          </div>
+          <div class="heatmap round" id="kaggleActivity"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE GITHUB REPOS -->
+    <section class="section section--tight" id="repos">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">Open source</p>
+          <h2 class="sec-title">Live from GitHub.</h2>
+          <p class="sec-sub">Latest public repositories, fetched in real time. Contributions welcome.</p>
+        </div>
+        <div id="github-repos" class="repos-grid" data-reveal>
+          <div class="loading">Loading repositories…</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span class="copy">© <span id="year"></span> Vedant Harish Bhavsar — built in public.</span>
+      <div class="socials" id="footerSocials"></div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/palette.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+
+</html>

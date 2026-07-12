@@ -1,33 +1,64 @@
-# Vedant Harish Bhavsar - ML/DS Portfolio
+# Vedant Harish Bhavsar — AI / ML Engineer Portfolio
 
-A premium, dark-themed, glassmorphism-styled portfolio website designed for a Machine Learning and Data Science enthusiast.
+A premium, monochrome (black canvas, white ink), multi-page portfolio positioning
+Vedant as an **AI Engineer · Data Scientist · ML Engineer** who learns in public.
+Vanilla HTML/CSS/JS — **no build step**, deploys as-is to GitHub Pages.
+
+## Pages
+| File | Purpose |
+| --- | --- |
+| `index.html` | Home — hero, about, data-science journey, current learning, skills, GitHub analytics, featured projects, build-in-public, roadmap, contact |
+| `projects.html` | All projects + expandable case studies + project filters + Kaggle achievements + live GitHub repos |
+| `lab.html` | AI Lab — experiments, notebooks, failed attempts, mathematics for AI, research interests |
+| `logs.html` | Learning logs (weekly), currently studying, certificates, technical notes |
+
+## Architecture
+```
+css/style.css      Design system (tokens, light/dark, components, heatmap, palette, terminal)
+js/data.js         ⭐ SINGLE SOURCE OF TRUTH — edit this to change all content
+js/core.js         Theme, nav, scroll reveal, animated counters, and every renderer
+js/github.js       Live GitHub stats, language bars, contribution heatmap, latest repos
+js/palette.js      Command palette (⌘K / Ctrl+K) — fuzzy nav across all pages
+js/terminal.js     Interactive on-site terminal (button, or press `~`) — type `help`
+```
+
+## ✏️ How to update content
+**Edit `js/data.js` only.** Every page renders itself from that file. It's fully
+commented. Entries marked `// EDIT: example` are realistic placeholders — replace
+or delete them. Nothing is presented as a fake accomplishment.
+
+- **Add a project** → append to `DATA.projects`
+- **Weekly learning log** → add an entry to the TOP of `DATA.logs`
+- **Update skill progress** → tweak `pct` in `DATA.learning`
+- **Kaggle achievements** → set your real tiers/medals in `DATA.kaggle`
+  (Kaggle profiles are JS-rendered and can't be auto-scraped, so keep this in sync by hand)
 
 ## Features
-- **Modern Dark Theme**: Deep blue/black palette with glassmorphism effects.
-- **Responsive Design**: Looks great on mobile, tablet, and desktop.
-- **GitHub Integration**: Automatically fetches your latest repositories using the GitHub API.
-- **Scroll Animations**: Smooth fade-in and slide-up animations as you scroll.
-- **Interactive Elements**: Custom cursor and hover effects.
+- Light/dark theme toggle (persists via `localStorage`; press `Shift+D`)
+- Command palette `⌘K`, interactive terminal `~`
+- Live GitHub analytics + contribution heatmap (public API, no token/backend)
+- Animated counters, typing hero roles, scroll-reveal, project filters, case studies
+- SEO: per-page meta, Open Graph, canonical URLs, JSON-LD Person schema
+- Fully responsive, respects `prefers-reduced-motion`
 
-## Project Structure
-- `index.html`: Main content structure.
-- `style.css`: All styles, animations, and responsive rules.
-- `script.js`: Interactivity, animations, and API integration.
-- `assets/`: Folder for images and documents (Resume, OG Image).
+## Assets to add (optional)
+Place these in an `assets/` folder:
+- `assets/resume.pdf` — linked from the hero and terminal
+- `assets/og-image.png` — social-share preview (1200×630)
 
-## How to Run Locally
-1. Simply double-click `index.html` to open it in your web browser.
-2. OR, if you have VS Code with the "Live Server" extension, right-click `index.html` and select "Open with Live Server".
+## Run locally
+```bash
+python3 -m http.server 8000   # then open http://localhost:8000
+```
+Or use VS Code Live Server.
 
-## Deployment to GitHub Pages
-1. Push this folder to a GitHub repository (e.g., named `vedantbhavsar17.github.io` or just `portfolio`).
-2. Go to the repository **Settings** > **Pages**.
-3. Under **Source**, select `Deploy from a branch`.
-4. Select `main` (or `master`) branch and `/root` folder.
-5. Click **Save**.
-6. Your site will be live in a few minutes!
+## Deployment (GitHub Pages)
+Pushing to `main` triggers `.github/workflows/static.yml`, which:
+1. Injects the Formspree endpoint from repo secret `FORMSPREE_URL` into `js/core.js`
+   (replaces the `__FORMSPREE_URL__` placeholder).
+2. Deploys the whole repo to GitHub Pages.
 
-## Customization
-- **Resume**: Place your resume PDF in the `assets` folder and name it `resume.pdf`.
-- **OG Image**: Place an image named `og-image.png` in the `assets` folder for social media previews.
-- **Email Form**: The specific contact form backend (Formspree) needs a unique ID. Update the `action` attribute in the `<form>` tag in `index.html` with your own Formspree endpoint or similar service.
+Set the secret at **Settings → Secrets and variables → Actions → `FORMSPREE_URL`**
+(e.g. `https://formspree.io/f/xxxx`). Without it, the contact form falls back to a
+"email me directly" message.
+```

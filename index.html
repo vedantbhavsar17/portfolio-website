@@ -1,413 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vedant Harish Bhavsar | Data Science & ML Portfolio</title>
-    <meta name="description"
-        content="Portfolio of Vedant Harish Bhavsar - Data Science & Machine Learning Enthusiast, Python Developer, and Web Developer.">
-    <meta name="keywords" content="Data Science, Machine Learning, Python, Portfolio, Vedant Bhavsar, ML Engineer">
-    <meta name="author" content="Vedant Harish Bhavsar">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vedant Harish Bhavsar — AI & Machine Learning Engineer</title>
+  <meta name="description"
+    content="Vedant Harish Bhavsar — AI Engineer, Data Scientist & ML Engineer. BCA student from Surat building production-grade ML systems. Learning in public: projects, math, and experiments." />
+  <meta name="keywords"
+    content="Vedant Harish Bhavsar, AI Engineer, Machine Learning Engineer, Data Scientist, Data Science portfolio, ML portfolio, Python, Surat, BCA" />
+  <meta name="author" content="Vedant Harish Bhavsar" />
+  <link rel="canonical" href="https://vedantbhavsar17.github.io/" />
+  <meta name="theme-color" content="#000000" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vedantbhavsar17.github.io/">
-    <meta property="og:title" content="Vedant Harish Bhavsar | Data Science & ML Portfolio">
-    <meta property="og:description"
-        content="Portfolio of Vedant Harish Bhavsar - Data Science & Machine Learning Enthusiast available for hire.">
-    <meta property="og:image" content="assets/og-image.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vedantbhavsar17.github.io/" />
+  <meta property="og:title" content="Vedant Harish Bhavsar — AI & Machine Learning Engineer" />
+  <meta property="og:description"
+    content="AI Engineer, Data Scientist & ML Engineer. Learning in public — projects, mathematics, and experiments." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vedant Harish Bhavsar — AI & Machine Learning Engineer" />
+  <meta name="twitter:description" content="AI Engineer, Data Scientist & ML Engineer. Learning in public." />
+  <meta name="twitter:image" content="assets/og-image.png" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="stylesheet" href="style.css">
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vedant Harish Bhavsar",
+    "jobTitle": "AI Engineer, Data Scientist, Machine Learning Engineer",
+    "url": "https://vedantbhavsar17.github.io/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Surat", "addressCountry": "India" },
+    "alumniOf": "SDJ International College, Surat",
+    "knowsAbout": ["Machine Learning", "Data Science", "Artificial Intelligence", "Python", "Linear Algebra", "Statistics", "Probability"],
+    "sameAs": [
+      "https://github.com/vedantbhavsar17",
+      "https://www.kaggle.com/vedantbhavsar43",
+      "https://linkedin.com/in/vedant-bhavsar1"
+    ]
+  }
+  </script>
 </head>
 
-<body class="dark-theme">
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+<body>
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a href="index.html" class="brand"><span class="pulse"></span>vedant.bhavsar</a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="lab.html">AI Lab</a></li>
+          <li><a href="logs.html">Logs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="kbd-btn" data-cmdk-open aria-label="Open command palette">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
+          <span class="kbd-label">Search</span><kbd>⌘K</kbd>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"></button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">VB<span class="dot">.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-grid-bg"></div>
+      <div class="wrap">
+        <span class="hero-status"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--live)"></span> Available for internships &amp; open-source collaboration</span>
+        <h1>Vedant Harish<br />Bhavsar<span class="dim">.</span></h1>
+        <p class="hero-roles" id="heroRoles"><span class="cursor"></span></p>
+        <p class="hero-tag" id="heroTag"></p>
+        <div class="hero-cta">
+          <a href="projects.html" class="btn btn--primary">
+            View projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a href="#" id="resumeBtn" class="btn" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M7 10l5 5 5-5M5 21h14" /></svg>
+            Résumé
+          </a>
+          <a href="#" id="githubBtn" class="btn btn--ghost" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="#" id="kaggleBtn" class="btn btn--ghost" target="_blank" rel="noopener">Kaggle ↗</a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-background">
-            <!-- Animated background elements will be here -->
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-        </div>
-        <div class="container hero-content">
-            <h2 class="animate-up">Hello, I'm</h2>
-            <h1 class="glitch animate-up" data-text="Vedant Harish Bhavsar">Vedant Harish Bhavsar</h1>
-            <h3 class="animate-up delay-1">Data Science & Machine Learning Enthusiast</h3>
-            <p class="animate-up delay-2">Transforming Data into Intelligent Solutions. Focused on predictive modeling,
-                intelligent systems, and web development.</p>
-            <div class="cta-buttons animate-up delay-3">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="https://github.com/vedantbhavsar17" target="_blank" class="btn btn-outline"><i
-                        class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.kaggle.com/vedantbhavsar43" target="_blank" class="btn btn-outline"><i
-                        class="fab fa-kaggle"></i> Kaggle</a>
-                <a href="assets/resume.pdf" class="btn btn-outline" download><i class="fas fa-download"></i> Download
-                    Resume</a>
-            </div>
-        </div>
-        <div class="scroll-down">
-            <a href="#about">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-            </a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text glass-card">
-                    <p>I am a <span class="highlight">Machine Learning</span> focused developer driven by mathematical
-                        reasoning and algorithmic thinking. My work centers around building predictive models using
-                        <span class="highlight">Python</span> and understanding the statistical and linear algebra
-                        foundations behind them.
-                    </p>
-                    <p>I actively implement regression models, dimensionality reduction techniques, and structured data
-                        pipelines while exploring how variance, optimization, and feature transformations influence
-                        model behavior. I focus on building systems that are not only functional but conceptually sound
-                        and analytically robust.</p>
-                    <p>My long-term objective is to specialize in advanced Machine Learning systems and contribute to
-                        the development of intelligent, data-driven technologies.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="number">3+</span>
-                            <span class="label">ML Projects</span>
-                        </div>
-                        <div class="stat">
-                            <span class="number">5+</span>
-                            <span class="label">Web Projects</span>
-                        </div>
-                        <div class="stat">
-                            <span class="number">4+</span>
-                            <span class="label">Languages</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
+      <div class="hero-scroll"><span>Scroll</span><span class="line"></span></div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-        <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-grid">
-                <!-- Data Science -->
-                <div class="skill-category glass-card fade-in">
-                    <h3><i class="fas fa-chart-bar"></i> Data Science</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Pandas & NumPy</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Data Cleaning & EDA</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Matplotlib/Seaborn</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- STATS -->
+    <div class="wrap" style="margin-top:-2rem">
+      <div class="statbar" id="statbar" data-reveal></div>
+    </div>
 
-                <!-- Machine Learning -->
-                <div class="skill-category glass-card fade-in delay-1">
-                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
-                    <div class="skill-tags">
-                        <span>Linear Regression</span>
-                        <span>Logistic Regression</span>
-                        <span>PCA</span>
-                        <span>Model Evaluation</span>
-                        <span>Feature Engineering</span>
-                        <span>Scikit-Learn</span>
-                    </div>
-                </div>
-
-                <!-- Programming & Web -->
-                <div class="skill-category glass-card fade-in delay-2">
-                    <h3><i class="fas fa-code"></i> Programming & Web</h3>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>C/C++</span>
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>WordPress</span>
-                    </div>
-                </div>
-
-                <!-- Tools -->
-                <div class="skill-category glass-card fade-in delay-3">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <div class="skill-icons">
-                        <i class="fab fa-git-alt" title="Git"></i>
-                        <i class="fab fa-github" title="GitHub"></i>
-                        <i class="fas fa-terminal" title="VS Code"></i>
-                        <i class="fab fa-wordpress" title="WordPress"></i>
-                        <i class="fab fa-python" title="Jupyter Notebooks"></i>
-                    </div>
-                </div>
-            </div>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">01 / About</p>
+          <h2 class="sec-title">Engineer in the making, thinking in mathematics.</h2>
         </div>
+        <div class="about-grid">
+          <div class="about-bio" id="aboutBio" data-reveal></div>
+          <div class="about-meta" id="aboutMeta" data-reveal data-reveal-delay="1"></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card glass-card">
-                    <div class="project-content">
-                        <h3>Student Score Prediction</h3>
-                        <p>Developed a predictive model to estimate student scores based on study hours using <span
-                                class="highlight">Linear Regression</span>. Implemented data preprocessing and
-                            visualization to analyze the correlation.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>Scikit-Learn</span>
-                            <span>Matplotlib</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/vedantbhavsar17" target="_blank"><i class="fab fa-github"></i>
-                                Source Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card glass-card">
-                    <div class="project-content">
-                        <h3>Lead Admission Prediction</h3>
-                        <p>Built a classification model using <span class="highlight">Logistic Regression</span> to
-                            predict the likelihood of lead conversion. Focused on feature selection and model accuracy
-                            improvement.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>NumPy</span>
-                            <span>Logistic Regression</span>
-                            <span>EDA</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/vedantbhavsar17" target="_blank"><i class="fab fa-github"></i>
-                                Source Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card glass-card">
-                    <div class="project-content">
-                        <h3>PCA Implementation & Vis.</h3>
-                        <p>Implemented Principal Component Analysis (PCA) to reduce dimensionality of complex datasets
-                            while retaining 95% variance. Visualized the principal components to understand data
-                            structure.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>PCA</span>
-                            <span>Dimensionality Reduction</span>
-                            <span>Data Viz</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/vedantbhavsar17" target="_blank"><i class="fab fa-github"></i>
-                                Source Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- DATA SCIENCE JOURNEY -->
+    <section class="section section--tight" id="journey">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">02 / Journey</p>
+          <h2 class="sec-title">From BCA to building intelligent systems.</h2>
+          <p class="sec-sub">The path I'm walking — computer science foundations, into mathematics, into machine learning, into deployment.</p>
         </div>
+        <div class="journey" id="journey" data-reveal></div>
+      </div>
     </section>
 
-    <!-- GitHub Integration Section -->
-    <section id="github-stats" class="github-stats section">
-        <div class="container">
-            <h2 class="section-title">Latest Repositories</h2>
-            <div id="github-repos" class="repos-grid">
-                <!-- Repos fetch via JS -->
-                <div class="loading">Loading repositories...</div>
-            </div>
+    <!-- EXPERIENCE -->
+    <section class="section section--tight" id="experience">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">Experience</p>
+          <h2 class="sec-title">Shipping real software.</h2>
+          <p class="sec-sub">Where I've applied engineering — building and delivering working projects, AI-assisted.</p>
         </div>
+        <div id="experienceList" data-reveal></div>
+      </div>
     </section>
 
-
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements section">
-        <div class="container">
-            <h2 class="section-title">Achievements & Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="content glass-card">
-                        <h3>Active Open Source Contributor</h3>
-                        <p>Consistently contributing to Machine Learning repositories and maintaining an active GitHub
-                            profile with regular commits.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="content glass-card">
-                        <h3>Web Development</h3>
-                        <p>Developed the official website for <strong>Growthxity Tech Solutions</strong>, ensuring a
-                            modern and responsive user interface.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="content glass-card">
-                        <h3>E-Commerce Development</h3>
-                        <p>Built and optimized the online platform for <strong>Elegantlike Luxury Jewellery</strong>
-                            using WordPress.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="content glass-card">
-                        <h3>ML Project Implementations</h3>
-                        <p>Successfully implemented core ML algorithms from scratch including Regression and
-                            Classification models.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- CURRENT LEARNING -->
+    <section class="section" id="learning">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">03 / Current learning</p>
+          <h2 class="sec-title">What I'm actively getting good at.</h2>
+          <p class="sec-sub">Live progress — these bars track momentum, not mastery. They move as I do.</p>
         </div>
+        <div class="learn-grid" id="learnGrid" data-reveal></div>
+      </div>
     </section>
 
-    <!-- Web Dev Portfolio (Small) -->
-    <section id="webdev" class="webdev section">
-        <div class="container">
-            <h2 class="section-title">Web Development</h2>
-            <div class="mini-grid">
-                <div class="mini-card glass-card">
-                    <h4>Elegantlike Luxury Jewellery</h4>
-                    <p>WordPress development and e-commerce solutions for a luxury jewelry brand.</p>
-                </div>
-                <div class="mini-card glass-card">
-                    <h4>Portfolio Sites</h4>
-                    <p>Designed and deployed responsive portfolio websites with modern CSS animations.</p>
-                </div>
-            </div>
+    <!-- SKILLS + TECH MARQUEE -->
+    <section class="section section--tight" id="skills">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">04 / Skills</p>
+          <h2 class="sec-title">The toolkit.</h2>
         </div>
+        <div class="skills-grid" id="skillsGrid" data-reveal></div>
+      </div>
+    </section>
+    <div class="marquee" data-reveal><div class="marquee-track" id="marquee"></div></div>
+
+    <!-- AI TOOLBOX -->
+    <section class="section" id="toolbox">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">Workflow · AI toolbox</p>
+          <h2 class="sec-title">I build with AI, deliberately.</h2>
+          <p class="sec-sub">Not shortcuts — leverage. Here's the stack I reach for and exactly how I use each tool.</p>
+        </div>
+        <div class="tools-grid" id="toolsGrid" data-reveal></div>
+      </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-card glass-card">
-                <div class="edu-header">
-                    <h3>Bachelor of Computer Applications (BCA)</h3>
-                    <span class="year">Present</span>
-                </div>
-                <h4>SDJ International College, Surat</h4>
-                <p>Focusing on Computer Science fundamentals, Database Management, and Mathematics for Computer Science.
-                </p>
-            </div>
+    <!-- KAGGLE -->
+    <section class="section" id="kaggle">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">05 / Kaggle</p>
+          <h2 class="sec-title">Notebooks Expert, ranked and rising.</h2>
+          <p class="sec-sub">Practicing on real data — notebooks, datasets, and discussion. Here's the profile at a glance.</p>
         </div>
+
+        <div class="card card--tick" data-reveal>
+          <div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-start;justify-content:space-between">
+            <div>
+              <div class="lab-kind">kaggle.com</div>
+              <div style="font-family:var(--font-mono);font-size:1.2rem;font-weight:600;margin-top:0.3rem" id="kaggleHandle"></div>
+              <div id="kaggleHeadline" style="margin-top:0.5rem"></div>
+            </div>
+            <a href="https://www.kaggle.com/vedantbhavsar43" id="kaggleLink" target="_blank" rel="noopener" class="btn">Open Kaggle profile ↗</a>
+          </div>
+          <div id="kaggleTiers" class="gh-grid" style="margin-top:1.6rem"></div>
+          <div id="kaggleNotebooks" style="margin-top:1rem"></div>
+        </div>
+
+        <div class="heatmap-wrap" data-reveal data-reveal-delay="1" style="margin-top:1.2rem">
+          <div class="heatmap-head">
+            <span class="status" data-s="live" id="kaggleActLabel"><span class="dot"></span> Public activity</span>
+            <div class="heatmap-legend">Less
+              <span class="cell" data-l="0"></span><span class="cell" data-l="1"></span>
+              <span class="cell" data-l="2"></span><span class="cell" data-l="3"></span>
+              <span class="cell" data-l="4"></span> More
+            </div>
+          </div>
+          <div class="heatmap round" id="kaggleActivity"></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-wrapper glass-card">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm currently available for internships and freelance projects in Data Science and Machine
-                        Learning.</p>
-
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:bhavsarvedant05@gmail.com">bhavsarvedant05@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://linkedin.com/in/vedant-bhavsar1" target="_blank">linkedin</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>India</span>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://github.com/vedantbhavsar17" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/vedant-bhavsar1" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a href="mailto:bhavsarvedant05@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contact-form" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                    <!-- <p class="form-note">*Using a static form service or mailto logic here</p> -->
-                </form>
-            </div>
+    <!-- FEATURED PROJECTS -->
+    <section class="section section--tight" id="projects">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">06 / Selected work</p>
+          <h2 class="sec-title">Projects I've shipped.</h2>
         </div>
-        <footer class="footer">
-            <p>&copy; 2026 Vedant Harish Bhavsar. All Rights Reserved.</p>
-        </footer>
+        <div class="projects-grid" id="featuredProjects" data-reveal></div>
+        <div style="margin-top:2rem" data-reveal>
+          <a href="projects.html" class="btn">All projects &amp; case studies
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <script src="github.js"></script>
+    <!-- HACKATHONS -->
+    <section class="section section--tight" id="hackathons">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">Hackathons</p>
+          <h2 class="sec-title">Building under pressure.</h2>
+          <p class="sec-sub">Shipping fast with a team, against the clock. More to come.</p>
+        </div>
+        <div class="hack-grid" id="hackList" data-reveal></div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- BUILD IN PUBLIC -->
+    <section class="section" id="build">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">07 / Build in public</p>
+          <h2 class="sec-title">Momentum, measured.</h2>
+          <p class="sec-sub">The honest scoreboard. Some numbers are zero today — that's the point of tracking them.</p>
+        </div>
+        <div class="build-grid" id="buildGrid" data-reveal></div>
+        <p style="margin-top:1.5rem" data-reveal>
+          <a href="logs.html" class="btn btn--ghost">Read the learning logs
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section section--tight" id="roadmap">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">08 / Future roadmap</p>
+          <h2 class="sec-title">Where this is going.</h2>
+        </div>
+        <div class="roadmap-grid" id="roadmapGrid" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">09 / Contact</p>
+          <h2 class="sec-title">Let's build something.</h2>
+          <p class="sec-sub">Open to internships, hackathon teams, and open-source collaboration in AI / Data Science.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" id="contactInfo" data-reveal></div>
+          <form class="contact-form" id="contact-form" method="POST" data-reveal data-reveal-delay="1">
+            <div class="form-group"><input type="text" name="name" placeholder="Your name" required /></div>
+            <div class="form-group"><input type="email" name="email" placeholder="Your email" required /></div>
+            <div class="form-group"><textarea name="message" placeholder="Your message" required></textarea></div>
+            <button type="submit" class="btn btn--primary">Send message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" /></svg>
+            </button>
+            <p class="form-note" id="formNote">Powered by Formspree.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span class="copy">© <span id="year"></span> Vedant Harish Bhavsar — built in public.</span>
+      <div class="socials" id="footerSocials"></div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/palette.js"></script>
+  <script src="js/terminal.js"></script>
 </body>
 
 </html>
